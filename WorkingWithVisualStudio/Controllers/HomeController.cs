@@ -12,6 +12,7 @@ namespace WorkingWithVisualStudio.Controllers
     {
         public IActionResult Index()
             => View(SimpleRepository.SharedRepository.Products);
+                .Where(p => p?.Price < 50));
     
     
     }
